@@ -1,0 +1,126 @@
+{% include "base.html" %}
+
+{% block content %}
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+<body onload="pencil()">
+<p><table>
+       <tr>
+            <td>
+            <fieldset id="toolset">
+            <br>
+            <br>
+            <button id="penciltool" type="button" style="height: 25px; width: 100px;" onclick="pencil()">Pencil</button>
+            <br>
+            <br>
+            <br>
+            <button id="linetool" type="button" style="height: 25px; width: 100px;" onclick="line()">Line</button>
+            <br>
+            <br>
+            <br>
+            <button id="rectangletool" type="button" style="height: 25px; width: 100px;" onclick="rectangle()">Rectangle</button> 
+            <br>
+            <br>
+            <br>
+            <button id="circletool" type="button" style="height: 25px; width: 100px;" onclick="circle()">Circle</button> 
+            <br>
+            <br>
+            <br>
+            <button id="erasertool" type="button" style="height: 25px; width: 100px;" onclick="eraser()">Eraser</button> 
+            <br>
+            <br>
+            <br>
+            <button id="resettool" type="button" style="height: 25px; width: 100px;" onclick="reset()">Reset</button> 
+            </fieldset>
+            </td>
+            <td>
+                <canvas id="paint" width="750" height="450" style="border: 5px solid #000000;">Update your browser to support HTML5 Canvas</canvas>
+            </td>
+        </tr>
+    </table></p>
+    <fieldset id="colorset">
+    <table>
+        <tr>
+            <td><button style="height: 20px; width: 80px;" onclick="fill()">Fill</button>
+            <td><button style="background-color: #000000; height: 20px; width: 20px;" onclick="color('#000000')"></button>
+            <td><button style="background-color: #B0171F; height: 20px; width: 20px;" onclick="color('#B0171F')"></button>
+            <td><button style="background-color: #DA70D6; height: 20px; width: 20px;" onclick="color('#DA70D6')"></button>
+            <td><button style="background-color: #8A2BE2; height: 20px; width: 20px;" onclick="color('#8A2BE2')"></button>
+            <td><button style="background-color: #0000FF; height: 20px; width: 20px;" onclick="color('#0000FF')"></button>
+            <td><button style="background-color: #4876FF; height: 20px; width: 20px;" onclick="color('#4876FF')"></button>
+            <td><button style="background-color: #CAE1FF; height: 20px; width: 20px;" onclick="color('#CAE1FF')"></button>
+            <td><button style="background-color: #6E7B8B; height: 20px; width: 20px;" onclick="color('#6E7B8B')"></button>
+            <td><button style="background-color: #00C78C; height: 20px; width: 20px;" onclick="color('#00C78C')"></button>
+            <td><button style="background-color: #00FA9A; height: 20px; width: 20px;" onclick="color('#00FA9A')"></button>
+            <td><button style="background-color: #00FF7F; height: 20px; width: 20px;" onclick="color('#00FF7F')"></button>
+            <td><button style="background-color: #00C957; height: 20px; width: 20px;" onclick="color('#00C957')"></button>
+            <td><button style="background-color: #3D9140; height: 20px; width: 20px;" onclick="color('#3D9140')"></button>
+            <td><button style="background-color: #32CD32; height: 20px; width: 20px;" onclick="color('#32CD32')"></button>
+            <td><button style="background-color: #00EE00; height: 20px; width: 20px;" onclick="color('#00EE00')"></button>
+            <td><button style="background-color: #008B00; height: 20px; width: 20px;" onclick="color('#008B00')"></button>
+            <td><button style="background-color: #76EE00; height: 20px; width: 20px;" onclick="color('#76EE00')"></button>
+            <td><button style="background-color: #CAFF70; height: 20px; width: 20px;" onclick="color('#CAFF70')"></button>
+            <td><button style="background-color: #FFFF00; height: 20px; width: 20px;" onclick="color('#FFFF00')"></button>
+            <td><button style="background-color: #CDCD00; height: 20px; width: 20px;" onclick="color('#CDCD00')"></button>
+            <td><button style="background-color: #FFF68F; height: 20px; width: 20px;" onclick="color('#FFF68F')"></button>
+            <td><button style="background-color: #FFFACD; height: 20px; width: 20px;" onclick="color('#FFFACD')"></button>
+            <td><button style="background-color: #FFEC8B; height: 20px; width: 20px;" onclick="color('#FFEC8B')"></button>
+            <td><button style="background-color: #FFD700; height: 20px; width: 20px;" onclick="color('#FFD700')"></button>
+            <td><button style="background-color: #F5DEB3; height: 20px; width: 20px;" onclick="color('#F5DEB3')"></button>
+            <td><button style="background-color: #FFE4B5; height: 20px; width: 20px;" onclick="color('#FFE4B5')"></button>
+            <td><button style="background-color: #EECFA1; height: 20px; width: 20px;" onclick="color('#EECFA1')"></button>
+            <td><button style="background-color: #FF9912; height: 20px; width: 20px;" onclick="color('#FF9912')"></button>
+            <td><button style="background-color: #8E388E; height: 20px; width: 20px;" onclick="color('#8E388E')"></button>
+            <td><button style="background-color: #7171C6; height: 20px; width: 20px;" onclick="color('#7171C6')"></button>
+            <td><button style="background-color: #7D9EC0; height: 20px; width: 20px;" onclick="color('#7D9EC0')"></button>
+            <td><button style="background-color: #388E8E; height: 20px; width: 20px;" onclick="color('#388E8E')"></button>
+             
+         </tr>
+         <tr>
+            <td><button style="height: 20px; width: 80px" onclick="outline()">Outline</button>
+            <td><button style="background-color: #71C671; height: 20px; width: 20px;" onclick="color('#71C671')"></button>
+            <td><button style="background-color: #8E8E38; height: 20px; width: 20px;" onclick="color('#8E8E38')"></button>
+            <td><button style="background-color: #C5C1AA; height: 20px; width: 20px;" onclick="color('#C5C1AA')"></button>
+            <td><button style="background-color: #C67171; height: 20px; width: 20px;" onclick="color('#C67171')"></button>
+            <td><button style="background-color: #555555; height: 20px; width: 20px;" onclick="color('#555555')"></button>
+            <td><button style="background-color: #848484; height: 20px; width: 20px;" onclick="color('#848484')"></button>
+            <td><button style="background-color: #F4F4F4; height: 20px; width: 20px;" onclick="color('#F4F4F4')"></button>
+            <td><button style="background-color: #EE0000; height: 20px; width: 20px;" onclick="color('#EE0000')"></button>
+            <td><button style="background-color: #FF4040; height: 20px; width: 20px;" onclick="color('#FF4040')"></button>
+            <td><button style="background-color: #EE6363; height: 20px; width: 20px;" onclick="color('#EE6363')"></button>
+            <td><button style="background-color: #FFC1C1; height: 20px; width: 20px;" onclick="color('#FFC1C1')"></button>
+            <td><button style="background-color: #FF7256; height: 20px; width: 20px;" onclick="color('#FF7256')"></button>
+            <td><button style="background-color: #FF4500; height: 20px; width: 20px;" onclick="color('#FF4500')"></button>
+            <td><button style="background-color: #F4A460; height: 20px; width: 20px;" onclick="color('#F4A460')"></button>
+            <td><button style="background-color: #FF8000; height: 20px; width: 20px;" onclick="color('FF8000')"></button>
+            <td><button style="background-color: #FFD700; height: 20px; width: 20px;" onclick="color('#FFD700')"></button>
+            <td><button style="background-color: #8B864E; height: 20px; width: 20px;" onclick="color('#8B864E')"></button>
+            <td><button style="background-color: #9ACD32; height: 20px; width: 20px;" onclick="color('#9ACD32')"></button>
+            <td><button style="background-color: #66CD00; height: 20px; width: 20px;" onclick="color('#66CD00')"></button>
+            <td><button style="background-color: #BDFCC9; height: 20px; width: 20px;" onclick="color('#BDFCC9')"></button>
+            <td><button style="background-color: #76EEC6; height: 20px; width: 20px;" onclick="color('#76EEC6')"></button>
+            <td><button style="background-color: #40E0D0; height: 20px; width: 20px;" onclick="color('#40E0D0')"></button>
+            <td><button style="background-color: #E0EEEE; height: 20px; width: 20px;" onclick="color('#E0EEEE')"></button>
+            <td><button style="background-color: #98F5FF; height: 20px; width: 20px;" onclick="color('#98F5FF')"></button>
+            <td><button style="background-color: #33A1C9; height: 20px; width: 20px;" onclick="color('#33A1C9')"></button>
+            <td><button style="background-color: #F0F8FF; height: 20px; width: 20px;" onclick="color('#F0F8FF')"></button>
+            <td><button style="background-color: #4682B4; height: 20px; width: 20px;" onclick="color('#4682B4')"></button>
+            <td><button style="background-color: #C6E2FF; height: 20px; width: 20px;" onclick="color('#C6E2FF')"></button>
+            <td><button style="background-color: #9B30FF; height: 20px; width: 20px;" onclick="color('#9B30FF')"></button>
+            <td><button style="background-color: #EE82EE; height: 20px; width: 20px;" onclick="color('#EE82EE')"></button>
+            <td><button style="background-color: #FFC0CB; height: 20px; width: 20px;" onclick="color('#FFC0CB')"></button>
+            <td><button style="background-color: #7CFC00; height: 20px; width: 20px;" onclick="color('#7CFC00')"></button>
+        </tr>
+        <tr>
+            <td><label>Line Width</label></td>
+            <td><button id="pixel_plus" type="button" onclick="add_pixel()" style="width: 25px;">+</button></td>
+            <td><button id="pixel_minus" type="button" onclick="reduce_pixel()" style="width: 25px;">-</button></td>
+        </tr>
+        </table>
+        <label>file name</label><input id="fname" type="text"><button id="save" onclick="save()">Save</button>
+        </fieldset>
+        <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+        {% load static %}
+        <script src="{% static 'js/script.js' %}"></script>
+{% endblock %}

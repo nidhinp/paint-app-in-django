@@ -1,0 +1,92 @@
+#toolset {
+    width     : 100px;
+    height    : 440px;
+    position  : absolute;
+    left      : 0px;
+    top       : 40px; 
+    background: #35d128;
+}
+
+#paint {
+    position  : absolute;
+    left      : 130px;
+    top       : 40px;
+}
+
+#colorset {
+    position  : absolute;
+    left      : 0px;
+    top       : 500px;
+    width     : 860px;
+}
+ 
+#title {
+    position  : absolute:
+    left      : 500px;
+}
+
+#penciltool {
+    background: #358128; 
+    color     : #f3f3f3;
+    width     : 80px;
+    height    : 25px;
+    border    : 1px solid #33842a;
+    -webkit-border-radius: 0 15px 15px 0;
+    -moz-border-radius: 0 15px 15px 0;
+    box-shadow: rgba(0, 0, 0, .75) 0 2px 6px;
+}
+
+#linetool {
+    background: #358128; 
+    color     : #f3f3f3;
+    width     : 80px;
+    height    : 25px;
+    border    : 1px solid #33842a;
+    -webkit-border-radius: 0 15px 15px 0;
+    -moz-border-radius: 0 15px 15px 0;
+    box-shadow: rgba(0, 0, 0, .75) 0 2px 6px;
+}
+
+#rectangletool {
+    background: #358128; 
+    color     : #f3f3f3;
+    width     : 80px;
+    height    : 25px;
+    border    : 1px solid #33842a;
+    -webkit-border-radius: 0 15px 15px 0;
+    -moz-border-radius: 0 15px 15px 0;
+    box-shadow: rgba(0, 0, 0, .75) 0 2px 6px;
+}
+
+#circletool {
+    background: #358128; 
+    color     : #f3f3f3;
+    width     : 80px;
+    height    : 25px;
+    border    : 1px solid #33842a;
+    -webkit-border-radius: 0 15px 15px 0;
+    -moz-border-radius: 0 15px 15px 0;
+    box-shadow: rgba(0, 0, 0, .75) 0 2px 6px;
+}
+
+#erasertool {
+    background: #358128; 
+    color     : #f3f3f3;
+    width     : 80px;
+    height    : 25px;
+    border    : 1px solid #33842a;
+    -webkit-border-radius: 0 15px 15px 0;
+    -moz-border-radius: 0 15px 15px 0;
+    box-shadow: rgba(0, 0, 0, .75) 0 2px 6px;
+}
+
+#resettool {
+    background: #358128; 
+    color     : #f3f3f3;
+    width     : 80px;
+    height    : 25px;
+    border    : 1px solid #33842a;
+    -webkit-border-radius: 0 15px 15px 0;
+    -moz-border-radius: 0 15px 15px 0;
+    box-shadow: rgba(0, 0, 0, .75) 0 2px 6px;
+}                

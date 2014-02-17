@@ -1,0 +1,11 @@
+{% include "base.html" %}
+{% block content %}
+{% if data and filename %}
+    <p><h3> {{ filename }} </h3></p>
+    <canvas hidden id="paint" width="750" height="450" style="border: 5px solid #000000;"></canvas>
+    <button id="show" onclick="view('{{ data }}')">View</button></p>
+{% endif %}
+    
+{% load static %}
+    <script src="{% static 'js/search.js' %}"></script>
+{% endblock %}
